@@ -20,3 +20,11 @@ React or Node seem like they would be WAYYY better for a long term version of th
 I don't trust my react skills for a timed task yet
 
 ## NOTE TO SELF....finish learning React
+
+## NAN error with too many clicks
+
+### Make interest compound in real time???
+That seems like it would be much better for a money game.
+
+### Add a canvas or chart to show money vs time
+Who doesn't love graphs?
