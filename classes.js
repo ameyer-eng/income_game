@@ -40,6 +40,7 @@ function Buy(){
             myDebt = myDebt + current_item_cost;
             myBalance = 0; 
             document.getElementById("Debt").innerHTML = "DEBT  " + myDebt.toString();
+            Calculate_interest(myDebt);
         }else{
             myBalance = myBalance - current_item_cost;
             document.getElementById("Balance").innerHTML =  "MONEY:" + myBalance.toString();
@@ -86,4 +87,11 @@ function Seller(){
     document.getElementById("SALE_1").innerHTML = "It will cost " + item_cost[index].toString() + " at rate " + rates[index];
     
 
+}
+
+function Calculate_interest(X)
+{
+    var owed =  X*interest;
+    //update interest para
+    document.getElementById("Interest").innerHTML = "Interest " + owed.toString();
 }
