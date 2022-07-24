@@ -32,5 +32,18 @@ document.getElementById("Debt").innerHTML = "DEBT" + myDebt.toString();
 function Buy(){
          myBalance = myBalance - 50;
          document.getElementById("Balance").innerHTML = myBalance.toString();
+         Seller();
+
  }
 
+function Seller(){
+    var index =  Math.floor(Math.random()*3);
+    console.log(index.toString());
+    var items = ["Car", "Bus", "House"];
+    var item_cost = [4000, 8000, 1000000000000000];
+
+    document.getElementById("SALE").innerHTML = "Item " + items[index].toString() + "  is for sale";
+    document.getElementById("SALE_1").innerHTML = "It will cost " + item_cost[index].toString() + "at rate";
+    
+
+}
