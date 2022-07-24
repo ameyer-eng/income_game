@@ -32,11 +32,19 @@ var interest = 0.04;
 
 document.getElementById("Items").innerHTML = "ITEMS:" + myItems.toString();
 document.getElementById("Balance").innerHTML = "Money:" + myBalance.toString();
-document.getElementById("Debt").innerHTML = "DEBT" + myDebt.toString();
+document.getElementById("Debt").innerHTML = "DEBT  " + myDebt.toString();
 
 function Buy(){
-         myBalance = myBalance - current_item_cost;
-         document.getElementById("Balance").innerHTML = myBalance.toString();
+         
+        if(myBalance < 1){
+            myDebt = myDebt + current_item_cost;
+            myBalance = 0; 
+            document.getElementById("Debt").innerHTML = "DEBT  " + myDebt.toString();
+        }else{
+            myBalance = myBalance - current_item_cost;
+            document.getElementById("Balance").innerHTML =  "MONEY:" + myBalance.toString();
+        }
+
          
 
          //call the seller function to put a new item for sale (seller should also be a class....)
