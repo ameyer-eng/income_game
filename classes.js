@@ -19,11 +19,11 @@
 
 
 var myItems = ["Car", "Bus", "House"];
-var myDebts = [];
+var myDebts = [4000, 8000, 10];
 
 var myDebt = 0;
 
-var myBalance = 5000;
+var myBalance = 500000;
 
 var current_item_cost = 0;
 
@@ -56,7 +56,14 @@ function Buy(){
 function Sell()
 {
     //pop the last element of the array and subtract it's cost
+    debugger
+    if(myDebts.length === 1){
+        document.getElementById("Balance").innerHTML =  "YOU ARE DEBT FREE: MONEY:" + myBalance.toString();   
+    }
     myBalance = myBalance + myDebts.pop();
+
+    
+
     //update the balance paragraph
     document.getElementById("Balance").innerHTML = myBalance.toString();
     //remove the item from my items
